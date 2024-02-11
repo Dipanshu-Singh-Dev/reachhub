@@ -10,4 +10,4 @@
     - secure flag true to prevent data from being transferred over unsafe connections
 
 ## Compromises, Several compromises that I had to make
-    - I couldn't configure authentication correctly in Swagger
+    - Authentication isn't configured correctly with Swagger, since it is wholly cookie based,After login the user is automatically authenticated
