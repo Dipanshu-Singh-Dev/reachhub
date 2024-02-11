@@ -1,6 +1,7 @@
 ## Notes
  - This is a MERN app, I had confirmed with someone with authority as Masai that this was acceptable.
  - Please make sure third-party cookies are allowed.
+ - The backend is deployed on Render, apps sleep thus making a request after some time may take unusually long time
 ## Setup
   - Ensure that node is installed and preferably a Code Editor
   - Clone the repo
