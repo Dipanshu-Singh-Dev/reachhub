@@ -6,6 +6,9 @@
   - Open the repo directory
   - cd into client and run 'npm install' (in separate terminal instance)
   - cd into server and run 'npm install' (in separate terminal instance)
+  - create an .env file inside server directory
+  - add variable with name : MONGO_DB = 'connection string to your mongoDB cluster'/'Database name'
+  - add variable with name : JWT_SECRET (the secret used by jsonwebtoken)
   - In client directory, npm start to run client
   - In server directory, npm start to run server
   - To access the Swagger api-docs, open 'http://localhost:3000/api-docs' in your browser after starting the server
