@@ -11,6 +11,37 @@ const model = require("../models/player");
 
 /**
  * @swagger
+ * components:
+ *   schemas:
+ *     Player:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: string
+ *           description: The unique identifier for the player.
+ *         username:
+ *           type: string
+ *           description: The username of the player.
+ *         perfs:
+ *           type: object
+ *           properties:
+ *             classical:
+ *               type: object
+ *               properties:
+ *                 rating:
+ *                   type: integer
+ *                   description: The classical rating of the player.
+ *                 progress:
+ *                   type: integer
+ *                   description: The progress of the player.
+ *           description: Performance statistics of the player.
+ *         patron:
+ *           type: boolean
+ *           description: Indicates if the player is a patron or not.
+ */
+
+/**
+ * @swagger
  * /top-players:
  *   get:
  *     summary: Retrieve all players
