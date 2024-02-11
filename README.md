@@ -4,7 +4,7 @@
   - Open the repo directory, cd into client and run 'npm install' and cd into server and run 'npm install' (in separate terminal instances)
   - In client directory, npm start to run client
   - In server directory, npm start to run server
-  - To access the Swagger api-docs, open 'http://localhost:3000/api-docs' in your browser
+  - To access the Swagger api-docs, open 'http://localhost:3000/api-docs' in your browser after starting the server
 
 ## Optimisations
     - 50% reduction in LCP & FCP after using localstorage for saving data and not reloading if its not more than a day old.(Had to remove because of server side authorisation)
