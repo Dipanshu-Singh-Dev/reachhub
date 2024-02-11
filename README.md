@@ -6,7 +6,7 @@
   [Frontend](https://client-reachhub.vercel.app)
   <br/>
   [API Docs](https://reachhub-server-pi6v.onrender.com/api-docs)
-## Setup
+## Setup (Locally)
   - Ensure that node is installed and preferably a Code Editor
   - Clone the repo
   - Open the repo directory
