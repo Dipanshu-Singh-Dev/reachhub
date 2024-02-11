@@ -11,7 +11,13 @@ const generateNUpdateCSV = require("./controllers/generateNUpdateCSV");
 const app = express();
 const PORT = process.env.PORT || 3000;
 const frontendUrl = "http://localhost:5173";
-app.use(cors({ origin: frontendUrl, credentials: true }));
+
+app.use(
+  cors(
+    { origin: frontendUrl, credentials: true },
+    { origin: "https://reachhub-nine.vercel.app/", credentials: true }
+  )
+);
 app.use(express.json(),cookieParser());
 app.use("/signup", require("./controllers/signup"));
 app.use("/login", require("./controllers/login"));
