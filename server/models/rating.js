@@ -4,19 +4,12 @@ const ratingSchema = new mongoose.Schema({
   ratings: [
     {
       name: String,
-      points: [
-        {
-          year: Number,
-          month: Number,
-          day: Number,
-          rating: Number,
-        },
-      ],
+      points: [[Number]], // Array of arrays of numbers
     },
   ],
   username: String,
 });
 
-const Rating = mongoose.model("rating", ratingSchema);
+const Rating = mongoose.model("Rating", ratingSchema);
 
 module.exports = Rating;

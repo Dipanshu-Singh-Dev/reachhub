@@ -11,12 +11,14 @@ module.exports = async () => {
   try {
     // Fetch data from the database
     const data = await Model.find();
-
     // Transform data to CSV format
-    const csvData = data.map((item) => ({
+    console.log(data[0].ratings)
+    const csvData = data.map((item) => {
+      // console.log(item.ratings)
+      return {
       username: item.username,
-      rating: item.ratings[0].points[item.ratings[0].points.length - 1].rating,
-    }));
+      rating: 1000,
+    };});
 
     // Convert data to CSV string
     const csvString = Papa.unparse(csvData);
