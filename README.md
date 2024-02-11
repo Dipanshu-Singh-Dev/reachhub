@@ -2,6 +2,8 @@
  - This is a MERN app, I had confirmed with someone with authority as Masai that this was acceptable.
  - Please make sure third-party cookies are allowed.
  - The backend is deployed on Render, apps sleep thus making a request after some time may take unusually long time
+## Deployed
+    - [Frontend](https://client-reachhub.vercel.app/) || [Backend Docs](https://reachhub-server-pi6v.onrender.com/api-docs/) 
 ## Setup
   - Ensure that node is installed and preferably a Code Editor
   - Clone the repo
@@ -18,8 +20,8 @@
 ## Optimisations
     - 50% reduction in LCP & FCP after using localstorage for saving data and not reloading if its not more than a day old.(Had to remove because of server side authorisation)
     - .47(poor) -> 0(good) CLS with Suspense to use loading fallbacks for Charts on player page 
-    - Further optimisations could be made if the app was made in Next.js like SSR & SSG.
-    - Since CSV generation takes some time, implemented a separated function which generates the CSV on server start and then in intervals of a day and sends the same on request.
+    - Since CSV generation takes time, implemented a separate function which generates the CSV on server start and then in intervals of a day and the file is sent on request.
+    - Further optimisations could be made if the app was made in Next.js using SSR & SSG.
 
 ## Security Considerations
     - Only cookies used for authorisation
