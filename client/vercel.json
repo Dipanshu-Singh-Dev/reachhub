@@ -1,5 +1,0 @@
-{
-  "version": 2,
-  "name": "Frontend",
-  "routes": [{ "src": "/(.*)", "dest": "/main.jsx" }]
-}
