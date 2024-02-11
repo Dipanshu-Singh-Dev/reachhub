@@ -1,5 +1,6 @@
 ## Notes
  - This is a MERN app, I had confirmed with someone with authority as Masai that this was acceptable.
+ - Please make sure third-party cookies are allowed.
 ## Setup
   - Ensure that node is installed and preferably a Code Editor
   - Clone the repo
