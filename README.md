@@ -1,7 +1,11 @@
+## Notes
+ - This is a MERN app, I had confirmed with someone with authority as Masai that this was acceptable.
 ## Setup
   - Ensure that node is installed and preferably a Code Editor
   - Clone the repo
-  - Open the repo directory, cd into client and run 'npm install' and cd into server and run 'npm install' (in separate terminal instances)
+  - Open the repo directory
+  - cd into client and run 'npm install' (in separate terminal instance)
+  - cd into server and run 'npm install' (in separate terminal instance)
   - In client directory, npm start to run client
   - In server directory, npm start to run server
   - To access the Swagger api-docs, open 'http://localhost:3000/api-docs' in your browser after starting the server
@@ -19,4 +23,4 @@
 
 ## Compromises
     - Authentication isn't configured correctly with Swagger, since it is wholly cookie based,After login the user is automatically authenticated
-    - CSV generation, the data is fairly complicated and would be suited more to a xlxs format thus the csv is fairly minimal
+    - CSV generation, the data is fairly complicated and would be suited more to a xlxs format with a multi sheet spreadsheet thus the csv is fairly minimal
