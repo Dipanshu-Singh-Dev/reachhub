@@ -14,11 +14,11 @@ const Player = () => {
       axios.get(`/ratings/${id}`).then((res) => {
         setData(res.data);
       }).catch((err) => {
-        setError(err.response.data.message);
-        if (!document.cookie.includes("token")) {
+        if (err.response.status === 401 || err.response.status === 403) {
+          // Token is not valid or other error occurred, redirect to login
           navigator("/login");
           return;
-        }
+        } else setError(err.response.data.message);
       });
     })()
   },[])
