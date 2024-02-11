@@ -2,10 +2,12 @@
  - This is a MERN app, I had confirmed with someone with authority as Masai that this was acceptable.
  - Please make sure third-party cookies are allowed.
  - The backend is deployed on Render, apps sleep thus making a request after some time may take unusually long time
-## Deployed Links
-  [Frontend](https://client-reachhub.vercel.app)
+## Deployed Links*
+  [Frontend](https://client-reachhub.vercel.app) || [API Docs](https://reachhub-server-pi6v.onrender.com/api-docs)
   <br/>
-  [API Docs](https://reachhub-server-pi6v.onrender.com/api-docs)
+  
+  *Please note that the first server request may take unusually long time, due to this being a free instance. Thanks for your understanding.
+
 ## Setup (Locally)
   - Ensure that node is installed and preferably a Code Editor
   - Clone the repo
