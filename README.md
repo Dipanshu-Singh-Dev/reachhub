@@ -9,5 +9,12 @@
     - httpOnly flag true to prevent client-side scripts from accessing cookie
     - secure flag true to prevent data from being transferred over unsafe connections
 
-## Compromises, Several compromises that I had to make
+## Compromises
     - Authentication isn't configured correctly with Swagger, since it is wholly cookie based,After login the user is automatically authenticated
+    - CSV generation, the data is fairly complicated and would be suited more to a xlxs format thus the csv is fairly minimal
+## Setup
+  - Clone the repo
+  - Open the repo directory, cd into client and run 'npm install' and cd into server and run 'npm install' (in separate terminal instances)
+  - In client directory, npm start to run client
+  - In server directory, npm start to run server
+  - To access the Swagger api-docs, open 'http://localhost:3000/api-docs' in your browser
