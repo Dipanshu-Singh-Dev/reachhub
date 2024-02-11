@@ -24,7 +24,7 @@ router.post("/", async (req, res) => {
       expiresIn: "1h",
     });
     //set token in cookies
-    res.cookie("token", token, {expiresIn: '8h',secure:true,sameSite:'none'});
+    res.cookie("token", token, {expiresIn: '8h',secure:true,sameSite:'none',httpOnly:true});
 
     res.status(200).json({ message: "Login successful" });
   } catch (error) {
