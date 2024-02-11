@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { connection } = require("./configs/db");
+const morgan = require("morgan");
 const swaggerUi = require("swagger-ui-express");
 const swaggerOptions = require("./configs/swaggerConfig");
 const Authorisation = require('./middlewares/Authorisation')
@@ -18,6 +19,7 @@ app.use(
     { origin: "https://reachhub-nine.vercel.app/", credentials: true }
   )
 );
+app.use(morgan("dev"));
 app.use(express.json(),cookieParser());
 app.use("/signup", require("./controllers/signup"));
 app.use("/login", require("./controllers/login"));

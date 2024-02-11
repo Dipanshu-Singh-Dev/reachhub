@@ -36,3 +36,50 @@
 ## Compromises
     - Authentication isn't configured correctly with Swagger, since it is wholly cookie based,After login the user is automatically authenticated
     - CSV generation, the data is fairly complicated and would be suited more to a xlxs format with a multi sheet spreadsheet thus the csv is fairly minimal
+## Benchmarks (Backend) (measured with morgan)
+
+| Endpoint                  | Status Code | Response Time (ms) |
+|---------------------------|-------------|--------------------|
+| POST /login               | 200         | 231.688            |
+| POST /signup              | 400         | 80.871             |
+| GET /rating-history-csv   | 200         | 4.232              |
+| GET /ratings/asdfa        | 404         | 142.159            |
+| GET /ratings/Sharkfang    | 200         | 79.072             |
+| GET /top-players          | 304         | 100.696            |
+
+## Benchmarks (Frontend) (measured with chrome web vitals extension)
+ # Login
+  | Metric | Value | Status |
+|--------|-------|--------|
+| LCP    | 490 ms | Good   |
+| FCP    | 490 ms | Good   |
+| TTFB   | 30 ms  | Good   |
+| CLS    | 0.00   | Good   |
+| CLS    | 0.00   | Good   |
+# Signup
+| Metric | Value | Status |
+|--------|-------|--------|
+| LCP    | 522 ms | Good   |
+| FCP    | 522 ms | Good   |
+| TTFB   | 29 ms  | Good   |
+| CLS    | 0.00   | Good   |
+| CLS    | 0.00   | Good   |
+# Homepage
+| Metric | Value | Status |
+|--------|-------|--------|
+| TTFB   | 23 ms | Good   |
+| FCP    | 717 ms | Good  |
+| LCP    | 717 ms | Good  |
+| CLS    | 0.00   | Good   |
+# Player page
+| Metric | Value | Status |
+|--------|-------|--------|
+| LCP    | 442 ms | Good   |
+| FCP    | 442 ms | Good   |
+| TTFB   | 12 ms  | Good   |
+| CLS    | 0.00   | Good   |
+| CLS    | 0.00   | Good   |
+
+
+
+
