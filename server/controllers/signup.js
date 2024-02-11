@@ -5,6 +5,39 @@ const Model = require("../models/user");
 
 const router = express.Router();
 
+/**
+ * @swagger
+ * tags:
+ *   name: Authentication
+ *   description: User authentication operations
+ */
+/**
+ * @swagger
+ * /signup:
+ *   post:
+ *     summary: Authenticate user
+ *     tags: [Authentication]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *               email:
+ *                 type: string
+ *               password:
+ *                 type: string
+ *     responses:
+ *       '201':
+ *         description: User created successfully, please login
+ *       '400':
+ *         description: User already exists
+ *       '500':
+ *         description: Internal server error
+ */
 router.post("/", async (req, res) => {
     console.log( req.body)
   try {

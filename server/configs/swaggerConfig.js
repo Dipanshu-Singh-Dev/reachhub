@@ -1,17 +1,25 @@
-const swaggerJsdoc = require('swagger-jsdoc');
+const swaggerJsdoc = require("swagger-jsdoc");
 
 const options = {
   swaggerDefinition: {
+    openapi: "3.0.0",
     info: {
-      title: 'Reachhub',
-      version: '1.0.0',
-      description: 'Test all endpoints of Reachhub',
+      title: "Rechhub API",
+      version: "1.0.0",
+      description: "API documentation",
     },
-    basePath: '/',
+    components: {
+      securitySchemes: {
+        CookieAuth: {
+          type: "apiKey",
+          in:"cookie",
+          name: "token",
+        },
+      },
+    },
+    security: [{ CookieAuth: [] }],
   },
-  apis: ['./controllers/*.js'],
+  apis: ["./controllers/*.js"],
 };
 
-const specs = swaggerJsdoc(options);
-
-module.exports = specs;
+module.exports = swaggerJsdoc(options);

@@ -2,6 +2,7 @@ const Model = require("../models/rating");
 const Router = require("express").Router();
 const fs = require("fs");
 const Papa = require("papaparse");
+const path = require("path");
 
 /**
  * @swagger
@@ -24,20 +25,8 @@ const Papa = require("papaparse");
  */
 Router.get("/", async (req, res) => {
   try {
-    let csvData = [];
-    const data = await Model.find();
-    data.forEach((item) => {
-      csvData.push({
-        username: item.username,
-        rating:
-          item.ratings[0].points[item.ratings[0].points.length - 1].rating,
-      });
-    });
-
-    const csvString = Papa.unparse(csvData);
-    fs.writeFileSync("ratings.csv", csvString);
-    res.sendFile("ratings.csv");
-    res.status(200).send("CSV file generated successfully.");
+    const filePath = path.resolve(__dirname, "../ratings.csv");
+    res.status(200).sendFile(filePath);
   } catch (error) {
     console.error("Error generating CSV:", error);
     res.status(500).json({ message: "Internal server error" });
