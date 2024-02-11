@@ -25,6 +25,7 @@
     - Only cookies used for authorisation
     - httpOnly flag true to prevent client-side scripts from accessing cookie
     - secure flag true to prevent data from being transferred over unsafe connections
+    - CORS policies have been configured to avoid requests from untrusted sources
 
 ## Compromises
     - Authentication isn't configured correctly with Swagger, since it is wholly cookie based,After login the user is automatically authenticated
